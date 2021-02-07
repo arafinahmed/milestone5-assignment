@@ -1,6 +1,7 @@
 const searchBtn = document.getElementById('button-addon2');
 const allMeals = document.getElementById('all-meals');
 const details = document.getElementById('details');
+const notAvailable = document.getElementById('not-available');
 
 searchBtn.addEventListener('click', function () {
     console.log("object");
@@ -23,9 +24,12 @@ const loadData = (key) => {
         .then(res => res.json())
         .then(data => {
             if(data.meals != null){
+                ifNotAvailable('none');
                 processAllData(data);
             }
-            console.log(data);
+            else{
+                ifNotAvailable('block');
+            }
         })
 }
 
@@ -91,4 +95,8 @@ const showDetails = (ingredients, name, imgUrl) => {
     });
     div.appendChild(ul);
     details.appendChild(div);
+}
+
+const ifNotAvailable = (type) => {
+    notAvailable.style.display = type;
 }
