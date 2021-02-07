@@ -1,6 +1,22 @@
+#all-meals{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.7em;
+}
 .single-meal{
     /* padding: 1.4em; */
     background-color: #F8F7F5;
     padding: 0;
     border-radius: 20px;
+    border: 1px solid red;
+}
+.single-meal img{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.single-meal h3{
+    padding: .7em;
+}
+#details{
+    width: 400px;
 }
