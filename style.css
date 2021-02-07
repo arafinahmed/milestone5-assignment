@@ -20,3 +20,15 @@
 #details{
     width: 400px;
 }
+
+header img{
+    width: 100px;
+}
+#navbarNav li {
+    padding-left: 40px;
+}
+.input-width{
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+}

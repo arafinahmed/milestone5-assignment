@@ -1,7 +1,8 @@
-const searchBtn = document.getElementById('searchBtn');
+const searchBtn = document.getElementById('button-addon2');
 const allMeals = document.getElementById('all-meals');
 const details = document.getElementById('details');
 searchBtn.addEventListener('click', function () {
+    console.log("object");
     const key = document.getElementById('search-text').value;
     loadData(key);
 });
@@ -75,5 +76,4 @@ const showDetails = (ingredients, name, imgUrl) => {
         ul.appendChild(li);
     });
     details.appendChild(ul);
-
 }
